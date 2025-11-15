@@ -5,6 +5,10 @@ public class GameDirector : MonoBehaviour
 {
     [SerializeField] private float time = 10f; // カウントダウン時間
 
+    private void Start()
+    {
+    }
+
     void Update()
     {
         time -= Time.deltaTime; // フレームごとに減らす
@@ -14,5 +18,8 @@ public class GameDirector : MonoBehaviour
             //SceneManager.LoadScene("NextSceneName"); // 移動したいシーン名に変更
             Debug.Log("ゲーム終了、次のSceneへ");
         }
+
+        //int count = PrefabCount.InstanceCount;
+        //Debug.Log("今の個数: " + count);
     }
 }
