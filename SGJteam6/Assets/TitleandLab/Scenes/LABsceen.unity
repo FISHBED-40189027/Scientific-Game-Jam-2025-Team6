@@ -533,8 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8fd4ab70f2d7443aeececed2182e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 45
-  maxMoveDistance: 50
+  followSpeed: 60
+  maxMoveDistance: 80
   sensitivity: 8
 --- !u!1 &410087039
 GameObject:

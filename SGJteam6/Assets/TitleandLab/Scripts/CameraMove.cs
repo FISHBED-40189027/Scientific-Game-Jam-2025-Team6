@@ -29,10 +29,12 @@ public class CameraMove : MonoBehaviour
     {
         // 1. マウスの入力処理とオフセットの計算
         
-        // スクリーンの中心からのマウス位置のオフセットを取得
+        // 「新しい入力システム」でマウスのスクリーン座標 (Vector2) を取得
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+
         // (0, 0) が画面の中心になるように正規化 (例: -0.5〜0.5)
-        float mouseX = (Input.mousePosition.x / Screen.width) - 0.5f;
-        float mouseY = (Input.mousePosition.y / Screen.height) - 0.5f;
+        float mouseX = (mousePos.x / Screen.width) - 0.5f;
+        float mouseY = (mousePos.y / Screen.height) - 0.5f;
 
         // sensitivityを適用して、マウスの動きに対する移動目標のオフセットを決定
         Vector3 targetOffset = new Vector3(
