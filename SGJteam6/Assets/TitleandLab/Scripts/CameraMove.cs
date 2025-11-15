@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.InputSystem;
 public class CameraMove : MonoBehaviour
 {
     // === 公開変数 (インスペクターで設定) ===
